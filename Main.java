@@ -10,9 +10,13 @@ public class Main {
         Hero h = new Hero();
         Matango m = new Matango();
         h.attack(m);
-        Character c = new Character() {
+/*
+ここで間違ってCharacterクラスをnewしてもコンパイルエラーになる。
+（abstractは抽象クラスのためインスタンス化は禁止されている）
+ */
 
-        }
-
+        Dancer d = new Dancer();
+        d.name = "アキラ";
+        d.attack(m);
     }
 }
